@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    particlesJS("space_particles", { "particles": { "number": { "value": 160, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#29bc30" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 1, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 4, "size_min": 0.3, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 600 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3 }, "repulse": { "distance": 400, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+    update = function () {
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+
+    $(document).ready(function() {
+        // Check for click events on the navbar burger icon
+        $(".navbar-burger").click(function() {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+        });
+    });
+</script>
+
+<div id="banner-holder" class="is-relative">
+    <div id="space_particles" style="position:absolute; width: 100%; height:100%;"></div>
+    <div id="banner" class="has-background-dark">
+        <div class="columns is-align-items-center">
+            <div class="column is-2" style="width:auto;">
+                <figure class="image px-5"><img style="height: 150px; width: 100%;" src="iasa_logo_vectorized_Jarrett.svg" alt="EMU IASA Logo"></figure>
+            </div>
+            <div class="column has-text-left-tablet is-10 p-0">
+                <div class="pb-2"><h1 class="title has-text-white is-3">Information Assurance <br class="is-hidden-tablet"> Student Association</h1></div>
+                <div class="pb-2"><h2 class="subtitle has-text-white is-4">Eastern Michigan University <br> Cyber Security Club</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="notification is-danger mb-0 py-2 is-radiusless">
+    <span class="icon mr-3"><i class="fas fa-xl fa-exclamation-circle" aria-hidden="true"></i></span>
+    <strong>Insert notices here.</strong>
+</div> -->
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+                Home
+            </a>
+            <!-- TODO: Switch out Dimitri's email with the club email, once we get an official emich email. -->
+            <a class="navbar-item" href="mailto:dskretta@emich.edu">
+                Contact Us
+            </a>
+            <a class="navbar-item" href="https://yolocon.github.io/">
+                YoloCon
+            </a>
+            <a class="navbar-item" href="https://yolocon.github.io/sponsors.html">
+                Sponsors
+            </a>
+            <a class="navbar-item" href="calendar.html">
+                Calendar
+            </a>
+            <a class="navbar-item" href="members.html">
+                Officers &amp; Members
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Forms
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://yolocon.github.io/rsvpform.html">
+                        YoloCon RSVP
+                    </a>
+                    <a class="navbar-item" href="https://yolocon.github.io/speakerform.html">
+                        YoloCon Speaker
+                    </a>
+                    <a class="navbar-item" href="https://yolocon.github.io/sponsorform.html">
+                        YoloCon Sponsor
+                    </a>
+                    <a class="navbar-item"
+                        href="https://forms.gle/kAHmxn7ntBHTGvCq8">
+                        Present
+                    </a>
+                    <a class="navbar-item"
+                        href="https://forms.gle/TCnDfJcSvRQPvP1j7">
+                        Suggestions
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Competition Info
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://www.nationalccdc.org/">
+                        <span class="icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </span>
+                        <span>CCDC</span>
+                    </a>
+                    <a class="navbar-item" href="https://www.ists.io/">
+                        <span class="icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </span>
+                        <span>ISTS</span>
+                    </a>
+                    <a class="navbar-item" href="https://nationalcyberleague.org/competition">
+                        <span class="icon">
+                            <i class="fas fa-shield"></i>
+                        </span>
+                        <span>NCL</span>
+                    </a>
+                    <a class="navbar-item" href="https://icl.cyberbit.com/">
+                        <span class="icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </span>
+                        <span>ICL</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button" href="https://discord.gg/u4JyXMdNDN" style="color:black; border-color:black">
+                        <span class="icon">
+                            <i class="fab fa-discord"></i>
+                        </span>
+                    </a>
+                    <a class="button" href="https://instagram.com/emuiasa" style="color:black; border-color:black">
+                        <span class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </a>
+                    <a class="button" href="https://youtube.com/@emuiasa" style="color:black; border-color:black">
+                        <span class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                    </a>
+                    <a class="button" href="https://github.com/emu-iasa" style="color:black; border-color:black">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                    <a class="button" href="https://linktr.ee/emuiasa" style="color:black; border-color:black">
+                        <span class="icon">
+                            <i class="fas fa-hashtag"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</html>

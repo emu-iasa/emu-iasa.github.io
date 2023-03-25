@@ -1,0 +1,28 @@
+#banner-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#banner {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .LI-profile-badge{
+        display: none;
+    }
+}
+
+.mapouter {
+    position: relative;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}

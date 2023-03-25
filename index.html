@@ -1,185 +1,233 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>IASA</title>
-    <meta charset="UTF-8">
+<html lang="en">
+    <head>
+    <title>IASA - Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" integrity="sha384-twcuYPV86B3vvpwNhWJuaLdUSLF9+ttgM2A6M870UYXrOsxKfER2MKox5cirApyA" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', () => {
-
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
-    
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-          el.addEventListener('click', () => {
-    
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-    
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+          // Check for click events on the navbar burger icon
+          $(".navbar-burger").click(function() {
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              $(".navbar-burger").toggleClass("is-active");
+              $(".navbar-menu").toggleClass("is-active");
           });
-        });
-      }
-    
-    });
+      });
     </script>
 </head>
 
 <body>
-    <section class="hero is-dark is-fullheight is-bold">
-        <div id="space_particles">
-            <div class="hero-body" style="position: absolute;  width: 100%; height: 100%;">
-                <div class="container is-fluid">
-                     <center>
-                    <img src="iasa-logo.png" width="500" height="500"></img>
-                    <h2 class="subtitle">  
-                        Student led Information Security Association at Eastern Michigan University
-                        <p><strong><span style="color: rgb(228, 47, 15)">NOTE: Yolocon has been offically psotpone to Fall 2020. Please reach out if there are any questions and/or concerns.</span></strong></p>
-                        <!-- <p><strong> UPDATE: </strong>This weeks meeting on <strong>March 13th</strong> will be held online due to COVID-19.</p> -->
-                    </h2>
+<div id="top">
+    <div id="banner-holder" class="is-relative">
+        <div id="space_particles" style="position:absolute; width: 100%; height:100%;"></div>
+        <div id="banner" class="has-background-dark">
+            <div class="columns is-align-items-center">
+                <div class="column is-2" style="width:auto;">
+                    <figure class="image px-5"><img style="height: 150px; width: 100%;" src="iasa_logo_vectorized_Jarrett.svg" alt="EMU IASA Logo"></figure>
+                </div>
+                <div class="column has-text-left-tablet is-10 p-0">
+                    <div class="pb-2"><h1 class="title has-text-white is-3">Information Assurance <br class="is-hidden-tablet"> Student Association</h1></div>
+                    <div class="pb-2"><h2 class="subtitle has-text-white is-4">Eastern Michigan University <br> Cyber Security Club</h2></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- <div class="notification is-danger mb-0 py-2 is-radiusless">
+        <span class="icon mr-3"><i class="fas fa-xl fa-exclamation-circle" aria-hidden="true"></i></span>
+        <strong>Insert notices here.</strong>
+    </div> -->
+
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <!--<a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-          </a>-->
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
-            <a class="navbar-item" href="mailto:emu_iasa@googlegroups.com">
-              Contact Us
-            </a>
-            <a class="navbar-item" href="https://yolocon.github.io">
-                YOLOcon
-            </a>
-            <a class="navbar-item" href="calendar.html">
-                Calendar
-            </a>
-            <a class="navbar-item" href="members.html">
-              Officers & Members
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Forms
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://yolocon.github.io/rsvpform.html">
-                  YOLOcon RSVP
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
                 </a>
-                <a class="navbar-item" href="https://yolocon.github.io/speakerform.html">
-                  YOLOcon Speaker
+                <!-- TODO: Switch out Dimitri's email with the club email, once we get an official emich email. -->
+                <a class="navbar-item" href="mailto:dskretta@emich.edu">
+                    Contact Us
                 </a>
-                <a class="navbar-item" href="https://yolocon.github.io/sponsorform.html">
-                  YOLOcon Sponsor
+                <a class="navbar-item" href="https://yolocon.github.io/">
+                    YoloCon
                 </a>
-                <a class="navbar-item" href="https://docs.google.com/forms/d/1lfWTkQ9pbf-SUUzmF1vezSFQ3E4QEIXZwfjF4mYSyTk/edit?usp=sharing">
-                  Present
+                <a class="navbar-item" href="https://yolocon.github.io/sponsors.html">
+                    Sponsors
                 </a>
-                <a class="navbar-item" href="https://docs.google.com/forms/d/1d0J7fFxwzj3jbBtG0C3ov9ztJHd-eT3rnCkX5of4s4U/edit?usp=sharing">
-                  Suggestions
+                <a class="navbar-item" href="calendar.html">
+                    Calendar
                 </a>
-              </div>
-            </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Competition Info
+                <a class="navbar-item" href="members.html">
+                    Officers &amp; Members
                 </a>
-        
-                <div class="navbar-dropdown">
-                  <a class="navbar-item" href="https://www.nationalccdc.org/">
-                    <span class="icon">
-                      <i class="fas fa-globe-americas"></i>
-                    </span>
-                    <span>CCDC</span>
-                  </a>
-                  <a class="navbar-item" href="https://www.ists.io/">
-                    <span class="icon">
-                      <i class="fas fa-laptop-code"></i>
-                    </span>
-                    <span>ISTS</span>
-                  </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Forms
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://yolocon.github.io/rsvpform.html">
+                            YoloCon RSVP
+                        </a>
+                        <a class="navbar-item" href="https://yolocon.github.io/speakerform.html">
+                            YoloCon Speaker
+                        </a>
+                        <a class="navbar-item" href="https://yolocon.github.io/sponsorform.html">
+                            YoloCon Sponsor
+                        </a>
+                        <a class="navbar-item"
+                            href="https://forms.gle/kAHmxn7ntBHTGvCq8">
+                            Present
+                        </a>
+                        <a class="navbar-item"
+                            href="https://forms.gle/TCnDfJcSvRQPvP1j7">
+                            Suggestions
+                        </a>
+                    </div>
                 </div>
-              </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button" href="https://emusec.slack.com" style="color:black; border-color:black" class="button is-inverted is-primary  is-outlined is-large">
-                    <span class="icon">
-                        <i class="fab fa-slack"></i>
-                    </span>
-                </a>
-                <a class="button" href="https://github.com/emu-iasa" style="color:black; border-color:black" class="button is-inverted is-primary is-outlined is-large">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                </a>
-              </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Competition Info
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://www.nationalccdc.org/">
+                            <span class="icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </span>
+                            <span>CCDC</span>
+                        </a>
+                        <a class="navbar-item" href="https://www.ists.io/">
+                            <span class="icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span>ISTS</span>
+                        </a>
+                        <a class="navbar-item" href="https://nationalcyberleague.org/competition">
+                            <span class="icon">
+                                <i class="fas fa-shield"></i>
+                            </span>
+                            <span>NCL</span>
+                        </a>
+                        <a class="navbar-item" href="https://icl.cyberbit.com/">
+                            <span class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            <span>ICL</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button" href="https://discord.gg/u4JyXMdNDN" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-discord"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://instagram.com/emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://youtube.com/@emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://github.com/emu-iasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://linktr.ee/emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-    <section class="section">
+    </nav>
+</div>
+<noscript>
+    <p class="notification is-danger"><strong>This site requires Javascript to function properly. Enable Javascript or update your browser to the latest version.</strong></p>
+</noscript>
+<section class="section">
+    <div class="container is-fluid">
+        <div class="content">
+            <h1 class="title is-2">About IASA</h1>
+            <p>
+            Eastern Michigan University's Information Assurance Student Association (IASA) guides and aids students interested in or pursuing a career in the Information Assurance field. All majors are welcome!
+            Come hangout at the IASA meetings every <strong>Wednesday at 5:00pm!</strong> (Unless informed otherwise via Discord or Instagram.)
+            </p>
+            <p>
+            Our objective is to aids students in the pursuit of a career in information assurance or cyber security. We also furthering awareness about Eastern Michigan University's Information Assurance & Cyber Defense (IACD) program, and help guide students interested in pursuing said major. We providing information and opportunities for students to develop and further their skills. Meetings will consist of
+            student-led and professional presentations, hands on practice, and student interactions.
+            </p>
+            <p>
+            The meetings are held <a href="https://discord.gg/u4JyXMdNDN">online</a> and in Room 157 <strong><a href="https://goo.gl/maps/3ZbZZS6YkwHiDsFW6">Sill Hall, Goodard, Ypsilanti, MI 48197</a></strong>.
+            </p>
+        </div>
+        <div class="content mapouter">
+            <div class="gmap_canvas"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d824.8761356513874!2d-83.620596!3d42.2485728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883ca84edfa237fd%3A0x7a7496775445269!2sSill%20Hall%2C%20Goodard%2C%20Ypsilanti%2C%20MI%2048197!5e1!3m2!1sen!2sus!4v1665545049500!5m2!1sen!2sus" height="300" style="width:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+    </div>
+</section>
+<section class="section">
         <div class="container is-fluid">
             <div class="content">
-                <h1>About IASA</h1>
-                <p>Eastern Michigan University's Information Assurance Student Association (IASA) is pleased to hold veteran and underclassmen students!- Come hangout at the IASA meetings every <strong>Friday at 5:30pm!</strong> (Unless informed otherwise via email or slack)</p>
-                <p>The objective of this student association is to inspire students to practice their abilities within a virtual enviroment, gain connections with fellow students, and eat pizza! Meetings will consist of lectures, hands on practice, and student interactions. </p>
-                <p>The meetings are held at the Roosevelt Hall, in room 6 <strong><a href="https://www.google.com/maps?ll=42.247687,-83.622644&z=20&t=h&hl=en-US&gl=US&deg=0&mapclient=embed&daddr=698+W+Forest+Ave+%23626+Ypsilanti,+MI+48197@42.2476872,-83.6226444">698 W Forest Ave #626, Ypsilanti, MI 48197</a>.</strong></p>
-            </div>
-            <div class="content">
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="900" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=698%20W%20Forest%20Ave%20%23626%2C%20Ypsilanti%2C%20MI%2048197&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Werbung: <a href="https://www.pureblack.de">Pure Black GmbH</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:900px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:900px;}</style></div>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container is-fluid">
-            <div class="content">
-              
-                <h1 id="Weekly Meetings">Weekly Meetings</h1>
+                <h1 class="title is-2" id="Announcements">Announcements</h1>
                 <hr>
-                <p>    
-                    <h3>Week 26</h3>
-                    <span class="tag">March 13, 2020</span>
-                    <p>Hello Everybody,
-                    <p>This week we will be hosting a resume night <strong><span style="color: rgb(228, 47, 15)">ONLINE</span></strong>. Chris Kreiger will be speaking about resumes, interviews, and any other soft skills/pointers involved in getting into the field of Infosec. Please bring a copy of your resume, and we hope to see you there!. YOLOcon is around the corner, please fill this <a class="btn btn-primary" href="https://forms.gle/Rp42JUaFGm2KMcZFA" role="button">(YOLOcon 20 RSVP Form)</a> out if you plan to attend YOLOcon 20! The event will take place on April 4th, 2020, Roosevelt 1st Floor Address: 698 W Forest Ave #626, Ypsilanti, MI 48197. If you would like to speak at this year's YOLOcon, please fill out this form: <a class="btn btn-primary" href="https://forms.gle/j237vr4Bd24mCiYK7" role="button">(YOLOcon 20 Speaker Form)</a>.
-                    </h3>Slack: emusec.slack.com
-                    <p>Cheers,
-                    <p>~The IASA Team
-           
-             </p>
-             </div>      
-                <hr>
+                <h3 class="subtitle is-5"><span class="tag is-medium">
+                March 24, 2023
+                </span>
+                Website Upgrades
+                </h3>
+                <p>Greetings, </p>
                 <p>
+                Our website has been overhauled with a new redesign and the latest information. Take a look around!
+                </p>
+                <p>Regards, </p>
+                <p>Information Assurance Student Association</p>
+                <hr>
+                <!--
+                <h3 class="subtitle is-5"><span class="tag is-medium">
+                January 00, 0000
+                </span>
+                Title
+                </h3>
+                <p>Greetings, </p>
+                <p>
+                Last club meeting...
+                </p>
+                </p>
+                <p>Regards, </p>
+                <p>Information Assurance Student Association</p>
+                <hr>
+                -->
             </div>
+            <p>
+            </p>
         </div>
-    </section>
+</section>
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
@@ -194,7 +242,5 @@
         };
         requestAnimationFrame(update);
     </script>
-
 </body>
-
 </html>

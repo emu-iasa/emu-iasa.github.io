@@ -1,179 +1,351 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>IASA</title>
-    <meta charset="UTF-8">
+<html lang="en">
+    <head>
+    <title>IASA - Members</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" integrity="sha384-twcuYPV86B3vvpwNhWJuaLdUSLF9+ttgM2A6M870UYXrOsxKfER2MKox5cirApyA" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', () => {
-
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
-    
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-          el.addEventListener('click', () => {
-    
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-    
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script>
+      // $.get("top.html", function(data){
+      //   $("#top").replaceWith(data);
+      // });
+      $(document).ready(function() {
+          // Check for click events on the navbar burger icon
+          $(".navbar-burger").click(function() {
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              $(".navbar-burger").toggleClass("is-active");
+              $(".navbar-menu").toggleClass("is-active");
           });
-        });
+      });
+      function ml(clickedElement, username){
+        clickedElement.href = "mail"+"to:" + window.atob(username)+"@emi"+"ch.edu";
       }
-    
-    });
-    </script>
+      </script>
 </head>
 
 <body>
-    <section class="hero is-dark is-fullheight is-bold">
-        <div id="space_particles">
-            <div class="hero-body" style="position: absolute;  width: 100%; height: 100%;">
-                <div class="container is-fluid">
-                     <center>
-                    <img src="iasa-logo.png" width="500" height="500"></img>
-                    <h2 class="subtitle">  
-                        Student led Information Security Association at Eastern Michigan University
-                        <p><strong><span style="color: rgb(228, 47, 15)">NOTE: Yolocon is right around the corner on April 4th! Don't forget to RSVP.</span></strong></p>
-                    </h2>
+  <div id="top">
+    <div id="banner-holder" class="is-relative">
+        <div id="space_particles" style="position:absolute; width: 100%; height:100%;"></div>
+        <div id="banner" class="has-background-dark">
+            <div class="columns is-align-items-center">
+                <div class="column is-2" style="width:auto;">
+                    <figure class="image px-5"><img style="height: 150px; width: 100%;" src="iasa_logo_vectorized_Jarrett.svg" alt="EMU IASA Logo"></figure>
+                </div>
+                <div class="column has-text-left-tablet is-10 p-0">
+                    <div class="pb-2"><h1 class="title has-text-white is-3">Information Assurance <br class="is-hidden-tablet"> Student Association</h1></div>
+                    <div class="pb-2"><h2 class="subtitle has-text-white is-4">Eastern Michigan University <br> Cyber Security Club</h2></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- <div class="notification is-danger mb-0 py-2 is-radiusless">
+        <span class="icon mr-3"><i class="fas fa-xl fa-exclamation-circle" aria-hidden="true"></i></span>
+        <strong>Insert notices here.</strong>
+    </div> -->
+
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <!--<a class="navbar-item" href="index.html">
-            <img src="iasa-logo.png" width="45" height="28">
-          </a>-->
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <div id="navbar" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
-            <a class="navbar-item" href="mailto:emu_iasa@googlegroups.com">
-              Contact Us
-            </a>
-            <a class="navbar-item" href="https://yolocon.github.io">
-                YOLOcon
-            </a>
-            <a class="navbar-item" href="calendar.html">
-                Calendar
-            </a>
-            <a class="navbar-item" href="members.html">
-                Officers & Members
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Forms
-              </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="https://yolocon.github.io/rsvpform.html">
-                  YOLOcon RSVP
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
                 </a>
-                <a class="navbar-item" href="https://yolocon.github.io/speakerform.html">
-                  YOLOcon Speaker
+                <!-- TODO: Switch out Dimitri's email with the club email, once we get an official emich email. -->
+                <a class="navbar-item" href="mailto:dskretta@emich.edu">
+                    Contact Us
                 </a>
-                <a class="navbar-item" href="https://yolocon.github.io/sponsorform.html">
-                  YOLOcon Sponsor
+                <a class="navbar-item" href="https://yolocon.github.io/">
+                    YoloCon
                 </a>
-                <a class="navbar-item" href="https://docs.google.com/forms/d/1lfWTkQ9pbf-SUUzmF1vezSFQ3E4QEIXZwfjF4mYSyTk/edit?usp=sharing">
-                  Present
+                <a class="navbar-item" href="https://yolocon.github.io/sponsors.html">
+                    Sponsors
                 </a>
-                <a class="navbar-item" href="https://docs.google.com/forms/d/1d0J7fFxwzj3jbBtG0C3ov9ztJHd-eT3rnCkX5of4s4U/edit?usp=sharing">
-                  Suggestions
+                <a class="navbar-item" href="calendar.html">
+                    Calendar
                 </a>
-              </div>
+                <a class="navbar-item" href="members.html">
+                    Officers &amp; Members
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Forms
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://yolocon.github.io/rsvpform.html">
+                            YoloCon RSVP
+                        </a>
+                        <a class="navbar-item" href="https://yolocon.github.io/speakerform.html">
+                            YoloCon Speaker
+                        </a>
+                        <a class="navbar-item" href="https://yolocon.github.io/sponsorform.html">
+                            YoloCon Sponsor
+                        </a>
+                        <a class="navbar-item"
+                            href="https://forms.gle/kAHmxn7ntBHTGvCq8">
+                            Present
+                        </a>
+                        <a class="navbar-item"
+                            href="https://forms.gle/TCnDfJcSvRQPvP1j7">
+                            Suggestions
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Competition Info
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://www.nationalccdc.org/">
+                            <span class="icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </span>
+                            <span>CCDC</span>
+                        </a>
+                        <a class="navbar-item" href="https://www.ists.io/">
+                            <span class="icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </span>
+                            <span>ISTS</span>
+                        </a>
+                        <a class="navbar-item" href="https://nationalcyberleague.org/competition">
+                            <span class="icon">
+                                <i class="fas fa-shield"></i>
+                            </span>
+                            <span>NCL</span>
+                        </a>
+                        <a class="navbar-item" href="https://icl.cyberbit.com/">
+                            <span class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            <span>ICL</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Competition Info
-                </a>
-        
-                <div class="navbar-dropdown">
-                  <a class="navbar-item" href="https://www.nationalccdc.org/">
-                    <span class="icon">
-                      <i class="fas fa-globe-americas"></i>
-                    </span>
-                    <span>CCDC</span>
-                  </a>
-                  <a class="navbar-item" href="https://www.ists.io/">
-                    <span class="icon">
-                      <i class="fas fa-laptop-code"></i>
-                    </span>
-                    <span>ISTS</span>
-                  </a>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button" href="https://discord.gg/u4JyXMdNDN" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-discord"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://instagram.com/emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://youtube.com/@emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://github.com/emu-iasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                        <a class="button" href="https://linktr.ee/emuiasa" style="color:black; border-color:black">
+                            <span class="icon">
+                                <i class="fas fa-hashtag"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+  <noscript>
+    <p class="notification is-danger"><strong>This site requires Javascript to function properly. Enable Javascript or update your browser to the latest version.</strong></p>
+  </noscript>
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="content">
+        <h1 id="officers" class="title is-2">Board Members</h1>
+        <hr>
+        <div class="card">
+            <div class="card-content">
+              <a href="https://www.linkedin.com/in/dimitrios-skrettas" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+              <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'ZHNrcmV0dGE=');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+              <p class="title is-size-4">Dimitrios Skrettas<span class="tag is-size-6 mx-2">President</span></p>
+              <div class="columns">
+                <div class="column">
+                  <p>
+                    Dimitrios Skrettas is a sophomore student at Eastern Michigan University. He got into computers from his passion for video games. He is the current President of the Information Assurance Student Association. He has captained multiple teams for the IASA for competitions such as the Collegiate Cyber Defense Competition (CCDC), The Information Security Talent Search competition (ISTS), and The International Cybersecurity League Collegiate Cup. He has helped lead Digital Divas workshops, networking events, and school events. He is also currently planning corporate outreach events for students, as well as YoloCon, our annual fundraising event.
+                  </p>
+                </div>
+                <div class="column is-1 is-hidden-touch"></div>
+                <div class="column" style="max-width: 355px;overflow: hidden;">
+                  <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="dimitrios-skrettas" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/dimitrios-skrettas?trk=profile-badge"></a></div>
                 </div>
               </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button" href="https://emusec.slack.com" style="color:black; border-color:black" class="button is-inverted is-primary  is-outlined is-large">
-                    <span class="icon">
-                        <i class="fab fa-slack"></i>
-                    </span>
-                </a>
-                <a class="button" href="https://github.com/emu-iasa" style="color:black; border-color:black" class="button is-inverted is-primary is-outlined is-large">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                </a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+              <a href="https://www.linkedin.com/in/janeen-hammoudeh-824416228" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+              <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'amhhbW1vdTE=');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Janeen Hammoudeh<span class="tag is-size-6 mx-2">Vice President</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Janeen Hammoudeh is a sophomore student at Eastern Michigan University from Ypsilanti. She attended the ECA @ EMU program and graduated with honors. She's the current Vice President of the IASA and has participated in the CyberFastTrack competition. She has helped lead Digital Divas workshops, helped plan networking events, and is currently helping plan Yolo Con, our annual fundraiser. 
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px;">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="janeen-hammoudeh-824416228" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/janeen-hammoudeh-824416228?trk=profile-badge"></a></div>
               </div>
             </div>
           </div>
         </div>
-      </nav>
-      <section class="section">
-        <div class="container is-fluid">
-            <div class="content">
-                
-                <h1 id="officers">Officers</h1>
-                <hr>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/penelope-mankey" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'cG1hbmtleQ==');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Penelope Mankey<span class="tag is-size-6 mx-2">Secretary</span></p>
+            <div class="columns">
+              <div class="column">
                 <p>
-                    <h3>Chris Meyer</h3>
-                    <span class="tag">President</span>
-                    <p></p>
-                    <hr>
-                    <h3>Noah Smith</h3>
-                    <span class="tag">Vice President</span>
-                    <p></p>
-                    <hr>
-                    <h3>Nathaniel Fergusson</h3>
-                    <span class="tag">Treasurer</span>
-                    <p></p>
-                    <hr>
-                    <h3>Nolan Heimlich</h3>
-                    <span class="tag">Secretary</span>
-                    <p></p>
-                    <hr>
-                    <h3>Luke McManamon</h3>
-                    <span class="tag">Member at large</span>
-                    <p></p>
+                  Penelope Mankey is a sophomore student from the Lansing area in Michigan. She graduated from the Wilson Talent Center in Mason and competed in CyberPatriot and Business Professionals of America during her junior and senior years there. So far during her time in the club, she's competed in the 2022 CCDC competition and the 2022 Fall National Cyber League individual and team games, the latter of which placing 25th out of nearly 4,000 teams. One of her goals is to empower her peers within the industry as well as bring more people into it, and so she helped to lead a workshop for Digital Divas–a program to expose middle and high school girls to STEM topics.
                 </p>
-                <hr>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px;">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="penelope-mankey" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/penelope-mankey?trk=profile-badge"></a></div>
+              </div>
             </div>
+          </div>
         </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/manraj-singh-72b819230/" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'bXNpbmdoMTI=');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Manraj Singh<span class="tag is-size-6 mx-2">Treasurer</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Manraj Singh is an IA/CD student from the Canton, Michigan area. He's participated in several competitions such as; CyberPatriot in 2019 ( 3rd place in the Platinum division in the state), ICL, both the individual and team portions of the NCL competition in 2022 ( Where his team was top 25 in the country ), and is planning on competing in several more competitions in the future. In his spare time, he loves toying with his cybersecurity home lab, running multiple VMs, including Windows Server, a home media server, a private tunneling solution, and many others.
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px;">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="manraj-singh-72b819230" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/manraj-singh-72b819230?trk=profile-badge"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/jarrett-signoretti" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'anNpZ25vcjE=');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Jarrett Signoretti<span class="tag is-size-6 mx-2">Webmaster</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Jarrett Signoretti is a sophomore student from Canton, Michigan. He's participated in several competitions. At the 2020 Michigan Governor's High School Cyber Challenge, his team won 3rd place. He placed 151st out of around three thousand competitors in the Fall 2021 National Cyber Scholar Competition. Last fall, he finished 71st out of nearly seven thousand students in the individual NCL game. Working together with other IASA members, they received the diamond medal by placing 25th out of almost 4,000 teams. His hobbies include coding in Python, creating instrumental music with FL Studio, and learning cybersecurity outside the classroom. So far, a few of his favorite topics in the field are web security, the Internet of Things, and botnets.
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px;">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="jarrett-signoretti" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jarrett-signoretti?trk=profile-badge"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <h1 id="members-at-large" class="title is-2">Members at Large</h1>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/alexander-rolfes-72780a256/" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'YXJvbGZlczE=');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Alexander Rolfes<span class="tag is-size-6 mx-2">Member at Large</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Alex Rolfes is a junior in the IA/CD program at Eastern Michigan University. Originally enrolled in the School of Education, with a focus on Secondary Ed. Chemistry Major Math Minor, Alex changed majors after he and his wife bought a house and had a second child. With over 14 years of experience in the customer service industry, Alex uses his strong interpersonal communication skills to help the club with business and community outreach. Alex's hobbies include playing Magic the Gathering, exercising, mountain biking, and disc golf.
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="alexander-rolfes-72780a256" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/alexander-rolfes-72780a256?trk=profile-badge"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/isaacdunham/" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'aWR1bmhhbQ==');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Isaac Dunham<span class="tag is-size-6 mx-2">Member at Large</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Isaac Dunham is a senior transfer student from Jackson College where he studied mathematics and physics. Throughout his five years of college, he's worked as an intern in F500 IT and cybersecurity. Believing strongly in the importance of community building for developing IT professionals, he primarily works to help the club with presentations, planning, and resource support. 
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="isaacdunham" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/isaacdunham?trk=profile-badge"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-content">
+            <a href="https://www.linkedin.com/in/karanvir-singh-771210248/" class="has-text-black is-pulled-right px-1 py-2"><span><i class="fab fa-2xl fa-linkedin"></i></span></a>
+            <a class="has-text-black is-pulled-right px-1 py-2" onclick="ml(this, 'a3NpbmdoNw==');"><span><i class="fas fa-2xl fa-envelope"></i></span></a>
+            <p class="title is-size-4">Karanvir Singh<span class="tag is-size-6 mx-2">Member at Large</span></p>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Karanvir Singh is an IACD student from Canton, Michigan. He's participated in several competitions such as; CyberPatriot in 2019 (3rd place in the Platinum division in the state), ICL, both the individual and team portions of the NCL competition in 2022 (Where his team was top 25 in the country), and is planning on competing in several more competitions in the future. In his free time, he runs a limousine taxi transportation company that handles over 2,000 clients all throughout North America.
+                </p>
+              </div>
+              <div class="column is-1 is-hidden-touch"></div>
+              <div class="column" style="max-width: 355px">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="karanvir-singh-771210248" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/karanvir-singh-771210248?trk=profile-badge"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
