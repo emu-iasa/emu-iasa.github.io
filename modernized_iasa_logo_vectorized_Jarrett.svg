@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="683"
+   height="800"
+   viewBox="0 0 683 800"
+   sodipodi:docname="!modernized_iasa_logo_vectorized_Jarrett.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="!modernized_iasa_logo_Jarrett.png"
+   inkscape:export-xdpi="303.57999"
+   inkscape:export-ydpi="303.57999"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="0.95361334"
+     inkscape:cx="166.20992"
+     inkscape:cy="364.40346"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8"
+     style="display:inline">
+    <g
+       id="g188"
+       style="display:inline"
+       inkscape:label="fills">
+      <path
+         style="display:inline;fill:#059174;fill-opacity:1"
+         d="M 117.08873,637.71947 10.87463,128.49896 339.26385,11.831567 669.7144,129.44145 567.25717,642.57521 C 493.01794,693.92924 416.88311,742.3589 340.86787,791.00794 264.76711,742.10244 191.04315,689.76543 117.08873,637.71947 Z"
+         id="path198"
+         inkscape:label="fill-outer-shield"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="display:inline;fill:#ffffff"
+         d="M 564.69371,629.52694 602.7617,442.28862 C 476.51211,416.65039 433.95458,320.05721 359.88202,222.35954 409.07878,222.46984 449.6331,210.89767 485.4414,244.83846 459.52858,75.521345 333.14701,68.984584 215.62313,150.27761 272.49007,376.07627 286.56584,369.20959 82.307318,455.21122 l 36.173352,173.99377 223.29067,147.82568 z"
+         id="path325"
+         inkscape:label="fill-eagle"
+         sodipodi:nodetypes="ccccccccc" />
+    </g>
+    <g
+       id="g1001"
+       style="display:inline"
+       inkscape:label="outlines">
+      <path
+         style="display:inline;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:20;stroke-dasharray:none;stroke-opacity:1"
+         d="M 564.69371,629.52694 603.02542,449.4051 C 476.77583,423.76687 433.95458,320.05721 359.88202,222.35954 409.07878,222.46984 449.6331,210.89767 485.4414,244.83846 459.52858,75.521345 333.14701,68.984584 215.62313,150.27761 272.49007,376.07627 287.38825,364.35123 83.129731,450.35286 l 35.350939,178.85213 223.29067,147.82568 z"
+         id="path2900"
+         inkscape:label="outline-eagle"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         style="display:inline;fill:#000000;stroke-width:0.614091"
+         d="m 355.81262,138.75816 c 0,0 14.31499,-4.12539 25.61319,-0.17102 0,0 4.27838,6.82679 -0.19541,14.27686 0,0 -13.86852,-1.7406 -25.41778,-14.10584 z"
+         id="path993"
+         inkscape:label="outline-eagle-eye"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="display:inline;fill:#000000"
+         d="M 110.52144,644.85478 -0.0163097,120.04861 C 113.48913,80.819461 226.99456,41.590312 340.5,2.3611623 454.67625,41.608255 568.85251,80.855347 683.02876,120.10244 646.05682,295.11242 609.08487,470.1224 572.11293,645.13238 495.17524,696.40655 418.23754,747.68072 341.29985,798.95489 264.37371,747.58819 187.44758,696.22148 110.52144,644.85478 Z M 551.72721,628.15177 654.73063,139.80816 C 550.10899,103.68099 445.48735,67.553808 340.86571,31.426629 L 28.70482,139.37785 131.59577,626.93952 341.6625,767.47989 c 70.02157,-46.44271 140.04315,-92.88541 210.06471,-139.32812 z"
+         id="path999"
+         inkscape:label="outline-outer-shield-outer-border"
+         sodipodi:nodetypes="cccccccccccccc" />
+    </g>
+  </g>
+</svg>
