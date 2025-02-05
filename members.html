@@ -259,8 +259,12 @@
             </div>
             <div class="column is-1 is-hidden-touch"></div>
             <div id="linkedin-badge-jack" class="column linkedin-badge">
-              <!-- Remember to call createLinkedinBadge() with LinkedIn details in members.js. -->
-              <!-- Jack doesn't have a working LinkedIn right now. -->
+              <script>
+                createLinkedinBadge(
+                  document.querySelector('#linkedin-badge-jack'), // The column div that the badge will be appended to.
+                  'jack-r-baa091302' // The profile name of the LinkedIn profile that the badge will link to.
+                );
+              </script>
             </div>
           </div>
         </div>
