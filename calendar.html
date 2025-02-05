@@ -4,36 +4,29 @@
   <title>IASA - Calendar</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css" integrity="sha512-RpeJZX3aH5oZN3U3JhE7Sd+HG8XQsqmP3clIbu4G28p668yNsRNj3zMASKe1ATjl/W80wuEtCx2dFA8xaebG5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" integrity="sha384-twcuYPV86B3vvpwNhWJuaLdUSLF9+ttgM2A6M870UYXrOsxKfER2MKox5cirApyA" crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="debug.css"> -->
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function() {
-        // Check for click events on the navbar burger icon
-        $(".navbar-burger").click(function() {
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            $(".navbar-burger").toggleClass("is-active");
-            $(".navbar-menu").toggleClass("is-active");
-        });
-    });
-  </script>
+  <script src="space-particles.js" defer></script>
+  <script src="navbar.js"></script>
 </head>
 
 <body>
-  <div id="top">
+<div id="top">
     <div id="banner-holder" class="is-relative">
-        <div id="space_particles" style="position:absolute; width: 100%; height:100%;"></div>
+        <div id="space-particles"></div>
         <div id="banner" class="has-background-dark">
             <div class="columns is-align-items-center">
-                <div class="column is-2" style="width:auto;">
-                    <figure class="image px-5"><img style="height: 150px; width: auto; display: inline;" src="modernized_iasa_logo_vectorized_Jarrett.svg" alt="EMU IASA Logo"></figure>
+                <div id="top-iasa-logo-holder" class="column is-2">
+                    <figure class="image px-5"><img id="top-iasa-logo" src="modernized_iasa_logo_vectorized_Jarrett.svg" alt="EMU IASA Logo"></figure>
                 </div>
                 <div class="column has-text-left-tablet is-10 p-0">
-                    <div class="pb-2"><h1 class="title has-text-white is-3">Information Assurance <br class="is-hidden-tablet"> Student Association</h1></div>
-                    <div class="pb-2"><h2 class="subtitle has-text-white is-4">Eastern Michigan University <br> Cyber Security Club</h2></div>
+                    <div class="pb-2"><span class="title has-text-white is-3">Information Assurance <br class="is-hidden-tablet"> Student Association</span></div>
+                    <div class="pb-2"><span class="subtitle has-text-white is-4">Eastern Michigan University <br> Cyber Security Club</span></div>
                 </div>
             </div>
         </div>
@@ -80,7 +73,7 @@
                             Calendar
                         </a>
                         <a class="navbar-item" href="members.html">
-                            Officers &amp; Members
+                            Board Members
                         </a>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link">
@@ -144,28 +137,28 @@
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                                <a class="button" href="https://discord.gg/u4JyXMdNDN" title="Discord" style="color:black; border-color:black">
+                                <a class="button" href="https://discord.gg/u4JyXMdNDN" title="Discord">
                                     <span class="icon">
                                         <i class="fab fa-discord"></i>
                                     </span>
                                 </a>
-                                <a class="button" href="https://instagram.com/emuiasa" title="Instagram" style="color:black; border-color:black">
+                                <a class="button" href="https://instagram.com/emuiasa" title="Instagram">
                                     <span class="icon">
                                         <i class="fab fa-instagram"></i>
                                     </span>
                                 </a>
                                 <!-- Removing a couple buttons to resolve a bug with banner not spanning whole window. -->
-                                <!-- <a class="button" href="https://youtube.com/@emuiasa" title="YouTube" style="color:black; border-color:black">
+                                <!-- <a class="button" href="https://youtube.com/@emuiasa" title="YouTube">
                                     <span class="icon">
                                         <i class="fab fa-youtube"></i>
                                     </span>
                                 </a>
-                                <a class="button" href="https://github.com/emu-iasa" title="GitHub" style="color:black; border-color:black">
+                                <a class="button" href="https://github.com/emu-iasa" title="GitHub">
                                     <span class="icon">
                                         <i class="fab fa-github"></i>
                                     </span>
                                 </a> -->
-                                <a class="button" href="https://linktr.ee/emuiasa" title="LinkTree" style="color:black; border-color:black">
+                                <a class="button" href="https://linktr.ee/emuiasa" title="LinkTree">
                                     <span class="icon">
                                         <i class="fas fa-hashtag"></i>
                                     </span>
@@ -178,29 +171,21 @@
         </div>
     </section>
 </div>
-
 <section class="section">
   <div class="container">
     <div class="content">
       <h1 id="google-calendar" class="title is-2">Google Calendar</h1>
       <hr>
-      <iframe src="https://calendar.google.com/calendar/embed?src=9f357face1427275da1641ef6c61915fd1ed907f535fed49716f0f770aca73b8%40group.calendar.google.com&ctz=America%2FDetroit" style="width: 100%; border: 0;" height="550vh" frameborder="0" scrolling="no"></iframe>
+      <iframe class="invert-on-dark" src="https://calendar.google.com/calendar/embed?src=9f357face1427275da1641ef6c61915fd1ed907f535fed49716f0f770aca73b8%40group.calendar.google.com&ctz=America%2FDetroit" style="width: 100%; height: 75vh; border: 0;" frameborder="0" scrolling="no"></iframe>
     </div>
   </div>
 </section>
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
-          Made with <strong><span style="color: rgb(0, 214, 29)">♥</span></strong> by the <strong>IASA</strong>
+            Made with <strong><span id="footer-heart">♥</span></strong> by the <strong>IASA</strong>
         </p>
     </div>
 </footer>
-<script>
-  particlesJS("space_particles", { "particles": { "number": { "value": 160, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#29bc30" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 1, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 4, "size_min": 0.3, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 600 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "bubble" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3 }, "repulse": { "distance": 400, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
-  update = function () {
-      requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
 </body>
 </html>

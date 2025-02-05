@@ -1,3 +1,26 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&&display=swap'); */
+
+/* Applies changes to the default Bulma theme. */
+:root {
+    /* Makes the links club color. */
+    --bulma-link-h: 168deg;
+    --bulma-link-s: 93%;
+    --bulma-link-l: 29%;
+    /* This makes it so the links aren't so bright of a shade. Like on member's LinkedIn and email buttons. */
+    --bulma-link-on-scheme-l: 40%;
+    /* If we choose to use a different font from default. */
+    /* --bulma-family-primary: 'Handjet', sans-serif;
+    --bulma-body-weight: 500; */
+}
+
+/* Make light mode embedded elements darker. Ex: Google Maps, Google Calendar */
+/* DO NOT use on photographs and LinkedIn embeds. Inverts colors. */
+[data-theme=dark] .invert-on-dark:not(img), .theme-dark .invert-on-dark:not(img) {
+    filter: grayscale(100%) invert(100%) contrast(85%);
+    -webkit-filter: grayscale(100%) invert(100%) contrast(85%);
+}
+
+/* Top/Banner styles */
 #banner-holder {
     display: flex;
     flex-direction: column;
@@ -12,12 +35,40 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 480px) {
-    .LI-profile-badge{
-        display: none;
-    }
+#space-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
+#top-iasa-logo-holder {
+    width: auto;
+}
+
+#top-iasa-logo {
+    height: 150px;
+    width: auto;
+    display: inline;
+}
+
+/* #banner .title {
+    font-weight: var(--bulma-weight-bold);
+}
+
+#banner .subtitle {
+    font-weight: var(--bulma-weight-medium);
+}
+
+.navbar-item, .navbar-link {
+    font-weight: var(--bulma-weight-extrabold);
+} */
+
+/* Footer styles */
+#footer-heart {
+    color: var(--bulma-link);
+}
+
+/* Google Maps styles */
 .mapouter {
     position: relative;
 }
@@ -25,4 +76,21 @@
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
+}
+
+/* Inverts the colors when dark mode is enabled. */
+@media (prefers-color-scheme: dark) {
+    /* Make light mode embedded elements darker. Ex: Google Maps, Google Calendar */
+    /* DO NOT use on photographs and LinkedIn embeds. Inverts colors. */
+    .invert-on-dark:not(img) {
+        filter: grayscale(100%) invert(100%) contrast(85%);
+        -webkit-filter: grayscale(100%) invert(100%) contrast(85%);
+    }
+}
+
+/* Hide LinkedIn embeds on small screens. */
+@media screen and (max-width: 480px) {
+    .LI-profile-badge{
+        display: none;
+    }
 }
